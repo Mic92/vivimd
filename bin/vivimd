@@ -1,0 +1,102 @@
+#!/bin/bash
+
+usage() {
+  cat <<EOF
+usage: ${0##*/} [options] file
+
+  Options:
+    -s STYLE       Use STYLE for css.
+    -h             Print this help message
+    -l             Print available styles.
+
+EOF
+}
+
+write_head() {
+  cat << EOF
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+EOF
+  cat $1
+  cat << EOF
+</style>
+</head>
+EOF
+}
+
+write_md() {
+  markdown $1
+}
+
+write_tail() {
+  cat << EOF
+</html>
+EOF
+}
+
+show_style() {
+  filename=`basename "$1"`
+  echo -n "${filename%.*}: "
+  desc=`head -n 1 "$1"`
+  desc=${desc/"/* "/}
+  desc=${desc/" */"/}
+  echo "${desc}"
+}
+
+err() {
+  echo "Error: $1" 1>&2
+  exit 1
+}
+
+bindir=`dirname "$0"`
+root=`realpath "${bindir}/.."`
+styledir=${root}/share/vivimd/style
+
+if [[ -z $1 ]]; then
+  usage
+  exit 0
+fi
+
+while getopts "s:hl" OPT; do
+  case $OPT in 
+    s)
+      style=${OPTARG}
+      if [[ ! -f "${style}" ]]; then
+        if [[ -f "${styledir}/${style}" ]]; then
+          style=${styledir}/${style}
+        elif [[ -f "${styledir}/${style}.css" ]]; then
+          style=${styledir}/${style}.css
+        else
+          err "style not found."
+        fi
+      fi
+      ;;
+    h)
+      usage
+      exit 0
+      ;;
+    l)
+      for f in "${styledir}"/*.css; do
+        show_style "$f"
+      done
+      exit 0
+      ;;
+    ?)
+      exit 1
+      ;;
+  esac
+done
+shift $(( OPTIND - 1 ))
+
+if [[ -z "${style}" ]]; then
+  style=${styledir}/github.css
+fi
+
+(( $# )) || err "no file specified."
+file=$1; shift
+
+write_head "$style"
+write_md "$file"
+write_tail
