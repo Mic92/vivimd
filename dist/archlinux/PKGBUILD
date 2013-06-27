@@ -20,5 +20,5 @@ prepare() {
 
 package() {
   cd "$srcdir/$pkgname"
-  cp -r src/* "$pkgdir"
+  make install prefix="$pkgdir/usr"
 }
