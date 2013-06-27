@@ -1,0 +1,308 @@
+/* A sheet with ribbon title. */
+
+/* Eric Meyer's "Reset CSS" 2.0. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom css begins. */
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  background-color: #fff;
+  padding: 10px 40px;
+  width: 700px;
+  margin: 0 auto;
+  border: 2px solid #888;
+  border-radius: 10px;
+  box-shadow: 0 0 12px 0 #888;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 15px;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.7;
+  cursor: text;
+  position: relative;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 2.5em;
+  border-left: 10px solid #F56991;
+  color: #fff;
+  width: 800px;
+  margin-top: 40px;
+  padding-left: 10px;
+  background-color: #7F9DB9;
+  border-radius: 0 1.25em 1.25em 0;
+  margin-left: -40px;
+}
+
+div {
+  width: 600px;
+  background-color: #ff0000;
+}
+
+h2 {
+  width: 640px;
+  border-left: 10px solid #F56991;
+  font-size: 2em;
+  padding-left: 10px;
+  background-color: #87956E;
+  border-radius: 0 1em 1em 0;
+  color: #fff;
+}
+
+h2:hover {
+  margin-left: -40px;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  color: #777;
+  font-size: 1em;
+}
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #7F9DB9;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul li > :first-child,
+ol li > :first-child,
+ul li ul:first-of-type,
+ol li ol:first-of-type,
+ul li ol:first-of-type,
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin-top: 15px;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+table {
+  display: block;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F0F8FF;
+}
+
+table tr:nth-child(2n):hover {
+  background-color: #E3F2FF;
+}
+
+img {
+  max-width: 100%
+  box-sizing: border-box;
+}
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 2px;
+  padding: 0px 5px;
+  border: 1px solid #ddd;
+  background-color: #F0F8FF;
+  border-radius: 3px;
+}
+
+code:hover, tt:hover {
+  background-color: #E3F2FF;
+}
+
+code {
+  white-space: nowrap;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #F0F8FF;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre:hover {
+  background-color: #E3F2FF;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
