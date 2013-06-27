@@ -5,9 +5,10 @@ usage() {
 usage: ${0##*/} [options] file
 
   Options:
-    -s STYLE       Use STYLE for css.
+    -e             Use README.md as an example input.
     -h             Print this help message
     -l             Print available styles.
+    -s STYLE       Use STYLE for css.
 
 EOF
 }
@@ -53,14 +54,28 @@ err() {
 bindir=`dirname "$0"`
 root=`realpath "${bindir}/.."`
 styledir=${root}/share/vivimd/style
+docdir=${root}/share/vivimd/doc
 
 if [[ -z $1 ]]; then
   usage
   exit 0
 fi
 
-while getopts "s:hl" OPT; do
+while getopts "ehls:" OPT; do
   case $OPT in 
+    e)
+      file=${docdir}/README.md
+      ;;
+    h)
+      usage
+      exit 0
+      ;;
+    l)
+      for f in "${styledir}"/*.css; do
+        show_style "$f"
+      done
+      exit 0
+      ;;
     s)
       style=${OPTARG}
       if [[ ! -f "${style}" ]]; then
@@ -73,16 +88,6 @@ while getopts "s:hl" OPT; do
         fi
       fi
       ;;
-    h)
-      usage
-      exit 0
-      ;;
-    l)
-      for f in "${styledir}"/*.css; do
-        show_style "$f"
-      done
-      exit 0
-      ;;
     ?)
       exit 1
       ;;
@@ -94,8 +99,14 @@ if [[ -z "${style}" ]]; then
   style=${styledir}/github.css
 fi
 
-(( $# )) || err "no file specified."
-file=$1; shift
+if [[ -z "$#" ]]; then
+  err "no file specified."
+else
+  if [[ -z "${file}" ]]; then
+    file=$1
+  fi
+  shift
+fi
 
 write_head "$style"
 write_md "$file"
