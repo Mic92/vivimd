@@ -31,10 +31,6 @@ body {
 	line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
-}
-
 blockquote, q {
 	quotes: none;
 }
@@ -137,6 +133,14 @@ a:hover {
 
 ul, ol {
   padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
 }
 
 ul li > :first-child,
@@ -269,3 +273,10 @@ pre code, pre tt {
   border: none;
 }
 
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
