@@ -95,6 +95,10 @@ if [[ -z "${style}" ]]; then
 fi
 
 if [[ -z "${file}" ]]; then
+  if [[ -t 0 ]]; then
+    usage
+    exit 0
+  fi
   file=${1:-/proc/${$}/fd/0}
 fi
 
