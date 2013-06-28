@@ -8,8 +8,6 @@ being added and a list of them will be maintained here:
 <table>
   <tr><th>Style</th><th>Description</th></tr>
   <tr><td>github (default)</td><td>Github-like style.</td></tr>
-  <tr><td>chromatic</td><td>A light and chromatic stylesheet.</td></tr>
-  <tr><td>ribbon</td><td>A sheet with ribbon title.</td></tr>
 </table>
 
 This `README.md` file is written as a markdown file so that you can use it to
