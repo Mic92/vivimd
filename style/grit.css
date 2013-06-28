@@ -1,0 +1,298 @@
+/* A grit-colored style. */
+
+/* Eric Meyer's "Reset CSS" 2.0. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom css begins. */
+html {
+  background-image: url(data:image/gif;base64,R0lGODlhCAAIAPMAAExMTEdHR1VVVU1NTU5OTklJSUtLS0RERP///wAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAIAAgAAAQPEARB65g1681J2cbBjVUEADs=);
+  background-repeat: repeat;
+}
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ddd;
+  padding: 40px 60px;
+  background-color: #333;
+  border-top: 12px solid #4591d3;
+  border-bottom: 12px solid #4591d3;
+  border-radius: 3px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 15px;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.7;
+  cursor: text;
+  position: relative;
+  color: #4591d3;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-shadow: 0 1px 3px #111;
+}
+
+h2 {
+  font-size: 2em;
+  border-bottom: 1px solid #4591d3;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  color: #eee;
+  font-size: 1em;
+}
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #225d91;
+  padding: 0;
+}
+
+a {
+  color: #4591d3;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 1px 3px #888;
+}
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul li > :first-child,
+ol li > :first-child,
+ul li ul:first-of-type,
+ol li ol:first-of-type,
+ul li ol:first-of-type,
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin-top: 15px;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+blockquote {
+  border-left: 12px solid #225d91;
+  padding: 0 15px;
+  color: #222;
+  background-color: #ddd;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+table {
+  display: block;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: 3px solid #225d91;
+  border-bottom: 3px solid #225d91;
+  color: #222;
+}
+
+table th {
+  font-weight: bold;
+  border-bottom: 4px solid #555;
+}
+
+table td {
+  border-top: 1px solid #555;
+}
+
+table th, table td {
+  padding: 6px 13px;
+}
+
+table tr {
+  background-color: #ddd;
+}
+
+table tr:nth-child(2n) {
+  background-color: #98c2e7;
+}
+
+img {
+  max-width: 100%
+  box-sizing: border-box;
+}
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  color: #222;
+}
+
+code, tt {
+  margin: 0 2px;
+  padding: 0px 5px;
+  background-color: #ddd;
+  border-radius: 3px;
+}
+
+code {
+  white-space: nowrap;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #ddd;
+  border-top: 3px solid #225d91;
+  border-bottom: 3px solid #225d91;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}

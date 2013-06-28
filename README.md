@@ -6,18 +6,30 @@ Vivimd is a wrapper for markdown that attaches vivid styles. More styles are
 being added and a list of them will be maintained here:
 
 <table>
-  <tr><th>Style</th><th>Description</th></tr>
-  <tr><td>github (default)</td><td>Github-like style.</td></tr>
+  <tr><th>Style</th><th>Description</th><th>Preview page</th></tr>
+  <tr>
+    <td>github (default)</td><td>Github-like style.</td>
+    <td><a href="http://peterfyj.kd.io/vivimd/github.html">Preview</a></td>
+  </tr>
+  <tr>
+    <td>grit</td><td>A grit-colored style.</td>
+    <td><a href="http://peterfyj.kd.io/vivimd/grit.html">Preview</a></td>
+  </tr>
 </table>
 
 This `README.md` file is written as a markdown file so that you can use it to
 test vivimd. It's simple:
 
-    $ vivimd README.md > readme.html
+    $ vivimd -e > readme.html
 
-And then you can open `readme.html` with whatever browser.
+You can then open `readme.html` with whatever browser.
 
-To list the built-in styles:
+Other than using the default `github` style, you can specify other built-in
+styles or simply assign a custom css. The following code should explain it:
+
+    $ vivimd -e -s grit > readme.html
+
+To list all built-in styles:
 
     $ vivimd -l
 
